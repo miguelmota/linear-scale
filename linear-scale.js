@@ -32,7 +32,13 @@
       }
 
       var ratio = (maxScale - minScale) / (maxValue - minValue);
-      return minScale + ratio * (value - minValue);
+      const result = minScale + ratio * (value - minValue);
+
+      if (result === Infinity) return maxScale;
+      else if (result === -Infinity) return minScale;
+      else if (isNaN(result)) return minScale;
+
+      return result
     }.bind(this);
 
     scale.domain = function(value) {
