@@ -10,25 +10,21 @@
 npm install linear-scale
 ```
 
-```bash
-bower install linear-scale
-```
-
 # Usage
 
 ```javascript
-var LinearScale = require('linear-scale');
+var LinearScale = require('linear-scale')
 
-var scale = LinearScale().domain([0, 100]).range([1000, 10000]);
+var scale = LinearScale().domain([0, 100]).range([1000, 10000])
 
 // shorthand
-var scale = LinearScale([0, 100], [1000, 10000]);
+var scale = LinearScale([0, 100], [1000, 10000])
 
-console.log(scale(0)); // 1000
-console.log(scale(100)); // 10000
-console.log(scale(50)); // 5500
-console.log(scale(200)); // 19000
-console.log(scale(-100)); // -8000
+console.log(scale(0)) // 1000
+console.log(scale(100)) // 10000
+console.log(scale(50)) // 5500
+console.log(scale(200)) // 19000
+console.log(scale(-100)) // -8000
 ```
 
 # Test
@@ -39,4 +35,4 @@ npm test
 
 # License
 
-MIT
+[MIT](./LICENSE)
